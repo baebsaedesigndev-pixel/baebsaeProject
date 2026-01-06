@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Detail</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @font-face {
+            font-family: 'Paperozi';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperozi.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+        body { font-family: 'Paperozi', sans-serif; background-color: black; color: white; }
+    </style>
+</head>
+<body class="p-10">
+    
+    <a href="work.html" class="text-xl mb-10 block hover:text-gray-400">← BACK</a>
+
+    <div id="detail-container" class="max-w-4xl mx-auto">
+        <h1 class="text-4xl mb-4">로딩 중...</h1>
+    </div>
+
+    <script type="module">
+        import { createClient } from 'https://esm.sh/contentful'
+
+        const client = createClient({
+            space: 'kt9ca8nanx3n',
+            accessToken: 'waZ6thvp8c9doWZH9IpH8BQ49MhR9bA0qz1IDSQIHNM'
+        })
+
+        // 주소창에서 ?id=... 값을 찾아내는 마법의 코드
+        const urlParams = new URLSearchParams(window.location.search);
+        const projectId = urlParams.get('id');
+
+        async function loadDetail() {
+            if (!projectId) return;
+
+            // ID로 딱 하나의 데이터만 가져옴
+            const entry = await client.getEntry(projectId);
+            const { title, description, thumbnail, gallery } = entry.fields;
+            const imgUrl = 'https:' + thumbnail.fields.file.url;
+
+            // 화면에 뿌리기
+            document.getElementById('detail-container').innerHTML = `
+                <img src="${imgUrl}" class="w-full mb-8">
+                <h1 class="text-5xl mb-6">${title}</h1>
+                <p class="text-xl text-gray-300 leading-relaxed mb-10 whitespace-pre-line">${description}</p>
+                `;
+        }
+        loadDetail();
+    </script>
+</body>
+</html>

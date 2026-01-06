@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>뱁새디자인컴퍼니 - BAEBSAE DESIGN COMPANY</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'paperozi': ['Paperozi', 'Noto Sans KR', 'sans-serif'],
+                        'space': ['Space Mono', 'Noto Sans KR', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @font-face {
+            font-family: 'Paperozi';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-1Thin.woff2') format('woff2');
+            font-weight: 100;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Paperozi';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-2ExtraLight.woff2') format('woff2');
+            font-weight: 200;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Paperozi';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-3Light.woff2') format('woff2');
+            font-weight: 300;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Paperozi';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-4Regular.woff2') format('woff2');
+            font-weight: 400;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Paperozi';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-5Medium.woff2') format('woff2');
+            font-weight: 500;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Paperozi';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-6SemiBold.woff2') format('woff2');
+            font-weight: 600;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Paperozi';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-7Bold.woff2') format('woff2');
+            font-weight: 700;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Paperozi';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2');
+            font-weight: 800;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Paperozi';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-9Black.woff2') format('woff2');
+            font-weight: 900;
+            font-display: swap;
+        }
+    </style>
+</head>
+<body class="bg-white font-space tracking-tight text-black">
+    <!-- Navigation -->
+    <nav class="text-white fixed w-full top-0 z-50">
+        <div class="max-w-full px-8 lg:px-16">
+            <div class="flex justify-center items-center h-20 gap-14 lg:gap-20">
+                <a href="work.html" class="font-paperozi text-base lg:text-xl font-medium uppercase tracking-wider hover:text-gray-300 transition-colors">WORK</a>
+                <a href="#contact" class="font-paperozi text-base lg:text-xl font-medium uppercase tracking-wider hover:text-gray-300 transition-colors">CONTACT</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-amber-400 min-h-screen flex items-center justify-center pt-20">
+        <div class="max-w-full px-4 sm:px-8 text-center">
+            <h1 class="font-paperozi text-4xl sm:text-5xl lg:text-7xl font-extrabold text-black leading-none tracking-[0.0456em] lg:tracking-[0.0912em]">
+                BAEBSAEDESIGN
+            </h1>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="min-h-screen bg-black flex items-center justify-center relative">
+        <div class="flex flex-col lg:flex-row-reverse w-full gap-8 lg:gap-12">
+        <div class="w-full lg:w-[63%] bg-black flex items-center justify-center p-[0.95rem] sm:p-[1.9rem]">
+            <div class="bg-amber-400 border-8 border-black px-[1.872rem] py-[2.2464rem] sm:px-[2.808rem] sm:py-[3.3696rem] lg:px-[3.744rem] lg:py-[4.4928rem] w-full lg:h-[96.6%]" style="aspect-ratio: 3/2;">
+                <img src="baebsae-logo.png" alt="BaeBsae Design Company" class="w-full h-full object-contain">
+            </div>
+        </div>
+        
+        <div class="w-full lg:w-[37%] bg-black flex flex-col justify-center p-[0.95rem] sm:p-[1.9rem] lg:pl-8">
+            <div class="w-full mt-[3%]">
+                <!-- Header -->
+                <div class="mb-[2.4rem] lg:mb-[3.2rem]">
+                    <h2 class="font-paperozi text-4xl lg:text-[3.5rem] font-extralight text-amber-400 mb-[0.9rem] leading-tight">
+                        나다운 브랜드 디자인
+                    </h2>
+                    <h3 class="font-paperozi text-[2rem] lg:text-[3rem] font-extralight text-amber-400">
+                        뱁새디자인컴퍼니
+                    </h3>
+                </div>
+            </div>
+
+            <div class="w-full flex-1 flex items-start">
+                <!-- Content -->
+                <div class="space-y-12 sm:space-y-16 lg:space-y-[6rem] text-base sm:text-lg lg:text-[1.8rem] text-white font-paperozi font-extralight tracking-[0.039em]">
+                    <p class="leading-loose lg:leading-[2.5]">
+                        세상에 정해진 정답을 맞추려 애쓰다 상처 입기보다는, 조금 허술하더라도 나다운 모습 그대로를 사랑하는 마음을 디자인에 담습니다. 완벽하지 않아도 존재만으로 위도가 되는 귀여운 밈들처럼, 우리도 가장 우리다운 모습으로 세상의 마음을 두드리고자 합니다.
+                    </p>
+
+                    <p class="leading-loose lg:leading-[2.5]">
+                        남들이 정해놓은 '황새의 길' 대신 뱁새만의 유쾌한 날갯짓으로 세상에 없던 귀여운 지도를 그려 나가는 것, 그것이 뱁새 디자인 컴퍼니가 가장 잘하는 일입니다. 우리는 오늘도 '나다움'이라는 가장 강력한 무기를 들고, 귀여움으로 세상을 정복할 준비를 합니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- Page Number -->
+        <div class="absolute bottom-8 right-8 font-paperozi text-sm text-gray-400">
+            2/4
+        </div>
+    </section>
+
+    <!-- Service Section -->
+    <section id="service" class="min-h-screen bg-[#1a1a1a] flex items-center justify-center relative">
+        <div class="flex flex-col lg:flex-row-reverse w-full gap-8 lg:gap-12">
+        <div class="w-full lg:w-[63%] bg-[#1a1a1a] flex items-center justify-center p-[0.95rem] sm:p-[1.9rem]">
+            <div class="bg-white px-[2.34rem] py-[2.808rem] sm:px-[3.51rem] sm:py-[4.212rem] lg:px-[4.68rem] lg:py-[5.616rem] w-full lg:h-[96.6%]" style="aspect-ratio: 3/2;">
+                <img src="service1.png" alt="BaeBsae Design Company" class="w-full h-full object-contain">
+            </div>
+        </div>
+        
+        <div class="w-full lg:w-[37%] bg-[#1a1a1a] flex flex-col justify-center p-[0.95rem] sm:p-[1.9rem] lg:pl-8">
+            <div class="w-full">
+                <!-- Header -->
+                <div class="mb-[2.4rem] lg:mb-[3.2rem]">
+                    <h2 class="font-paperozi text-[3.5rem] lg:text-[4.5rem] font-extralight text-white mb-4 leading-tight">
+                        OUR SERVICE
+                    </h2>
+                </div>
+            </div>
+
+            <div class="w-full flex-1 flex items-start">
+                <!-- Content -->
+                <div class="space-y-12 sm:space-y-16 lg:space-y-[6rem] text-base sm:text-lg lg:text-[1.8rem] text-gray-300 font-paperozi font-extralight tracking-[0.039em]">
+                    <p class="leading-loose lg:leading-[2.5]">
+                        브랜딩 비주얼개발 심볼 & 로고 개발 컬러시스템 타이포그래피 그래픽 모티브 오프라인 제작물 홈페이지 UI/UX SNS피드 앱 아이콘 광고배너 상세페이지 홍보영상브랜드 뉴스레터 브랜드 가이드드
+                    </p>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- Page Number -->
+        <div class="absolute bottom-8 right-8 font-paperozi text-sm text-gray-400">
+            3/5
+        </div>
+    </section>
+
+    <!-- Service 2 Section -->
+    <section id="service2" class="min-h-screen bg-black flex items-center justify-center relative">
+        <div class="flex flex-col lg:flex-row-reverse w-full gap-8 lg:gap-12">
+        <div class="w-full lg:w-[63%] bg-black flex items-center justify-center p-[0.95rem] sm:p-[1.9rem]">
+            <div class="bg-white px-[2.34rem] py-[2.808rem] sm:px-[3.51rem] sm:py-[4.212rem] lg:px-[4.68rem] lg:py-[5.616rem] w-full lg:h-[96.6%]" style="aspect-ratio: 3/2;">
+                <img src="service2.png" alt="BaeBsae Design Company Service 2" class="w-full h-full object-contain">
+            </div>
+        </div>
+        
+        <div class="w-full lg:w-[37%] bg-black flex flex-col justify-center p-[0.95rem] sm:p-[1.9rem] lg:pl-8">
+            <div class="w-full">
+                <!-- Header -->
+                <div class="mb-[2.4rem] lg:mb-[3.2rem]">
+                    <h2 class="font-paperozi text-4xl lg:text-[3.5rem] font-bold text-amber-400 mb-4 leading-tight">
+                        브랜드 디자인 A to Z
+                    </h2>
+                    <h3 class="font-paperozi text-[2rem] lg:text-[3rem] font-bold text-amber-400">
+                        완전해결!
+                    </h3>
+                </div>
+            </div>
+
+            <div class="w-full flex-1 flex items-start">
+                <!-- Service Boxes -->
+                <div class="space-y-4 sm:space-y-6 lg:space-y-8 w-full">
+                    <div class="border-2 border-amber-400 p-4 sm:p-6 lg:p-8 text-center">
+                        <h4 class="font-paperozi text-base sm:text-lg lg:text-2xl font-bold text-white">브랜딩 비주얼개발</h4>
+                    </div>
+                    
+                    <div class="border-2 border-amber-400 p-4 sm:p-6 lg:p-8 text-center">
+                        <h4 class="font-paperozi text-base sm:text-lg lg:text-2xl font-bold text-white">오프라인 제작물</h4>
+                    </div>
+                    
+                    <div class="border-2 border-amber-400 p-4 sm:p-6 lg:p-8 text-center">
+                        <h4 class="font-paperozi text-base sm:text-lg lg:text-2xl font-bold text-white">온라인 광고홍보</h4>
+                    </div>
+                    
+                    <div class="border-2 border-amber-400 p-4 sm:p-6 lg:p-8 text-center">
+                        <h4 class="font-paperozi text-base sm:text-lg lg:text-2xl font-bold text-white">브랜드가이드 및 유지보수</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- Page Number -->
+        <div class="absolute bottom-8 right-8 font-paperozi text-sm text-gray-400">
+            4/5
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="min-h-screen bg-amber-400 flex items-center justify-center px-4 sm:px-8 relative">
+        <div class="max-w-4xl mx-auto text-center">
+            <!-- Title -->
+            <h1 class="font-paperozi text-3xl sm:text-5xl lg:text-8xl font-bold text-black mb-[2.4rem] sm:mb-[3.2rem] lg:mb-[4.8rem] leading-none tracking-[0.038em] lg:tracking-[0.076em]">
+                CONTACT US
+            </h1>
+
+            <!-- Logo -->
+            <div class="mb-[2.4rem] sm:mb-[3.2rem] lg:mb-[4.8rem] flex items-center justify-center">
+                <img src="baebsae-logo1.png" alt="BaeBsae Design Company" class="w-32 sm:w-48 lg:w-64 object-contain">
+            </div>
+
+            <!-- Contact Info -->
+            <div class="space-y-[0.8rem] sm:space-y-[1.2rem] lg:space-y-[1.6rem]">
+                <a href="tel:010-9819-8118" class="font-paperozi text-2xl sm:text-3xl lg:text-5xl font-bold text-black hover:opacity-70 transition-opacity block">
+                    010.9819.8118
+                </a>
+                <a href="mailto:baebsaedesign@gmail.com" class="font-paperozi text-xl sm:text-2xl lg:text-4xl font-bold text-black hover:opacity-70 transition-opacity block break-all">
+                    baebsaedesign@gmail.com
+                </a>
+            </div>
+        </div>
+
+        <!-- Page Number -->
+        <div class="absolute bottom-8 right-8 font-paperozi text-sm text-gray-600">
+            5/5
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-16 px-4 lg:px-8">
+        <div class="max-w-full">
+            <div class="grid md:grid-cols-3 gap-12 mb-12">
+                <div>
+                    <div class="text-2xl font-black text-white mb-4">뱁새디자인컴퍼니</div>
+                    <p class="text-sm leading-relaxed">
+                        // 디자인으로 세상을 바꾸는<br/>
+                        // 혁신적인 디자인 파트너
+                    </p>
+                </div>
+                <div>
+                    <div class="text-sm font-black text-amber-400 mb-4 uppercase">[QUICK_LINKS]</div>
+                    <div class="space-y-2 text-sm">
+                        <a href="#about" class="block hover:text-amber-400">→ ABOUT</a>
+                        <a href="#service" class="block hover:text-amber-400">→ SERVICE</a>
+                        <a href="work.html" class="block hover:text-amber-400">→ WORK</a>
+                        <a href="#contact" class="block hover:text-amber-400">→ CONTACT</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="text-sm font-black text-amber-400 mb-4 uppercase">[FOLLOW_US]</div>
+                    <div class="flex gap-0 text-sm">
+                        <a href="#" class="bg-amber-400 text-black px-6 py-3 hover:bg-white font-bold">
+                            [IG]
+                        </a>
+                        <a href="#" class="bg-amber-400 text-black px-6 py-3 hover:bg-white font-bold">
+                            [FB]
+                        </a>
+                        <a href="#" class="bg-amber-400 text-black px-6 py-3 hover:bg-white font-bold">
+                            [YT]
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-white">
+                <p class="text-xs text-center font-bold">
+                    [© 2024 BAEBSAE DESIGN COMPANY. ALL RIGHTS RESERVED.]
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
