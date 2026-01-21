@@ -23,17 +23,16 @@ async function displayProjects() {
       container.innerHTML = '<p style="color:white;">등록된 프로젝트가 없습니다.</p>'
       return
     }
-
-    // 29행부터 수정
+    
+// 29행부터 45행까지 교체
 container.innerHTML = response.items.map(item => {
-  const title = item.fields['fields.name'] // fields.name 필드에서 제목 가져오기
-  const thumbnail = item.fields['title.image'] // title.image 필드에서 이미지 가져오기
+  const title = item.fields.name || '제목 없음' // 필드 ID를 name으로 바꿨을 때
+  const thumbnail = item.fields.thumbnail // 필드 ID를 thumbnail로 바꿨을 때
   const id = item.sys.id
 
-  // 이미지가 없을 경우를 대비한 안전장치
   const imageUrl = (thumbnail && thumbnail.fields && thumbnail.fields.file) 
     ? (thumbnail.fields.file.url.startsWith('//') ? 'https:' + thumbnail.fields.file.url : thumbnail.fields.file.url)
-    : '기본_이미지_주소'; 
+    : 'https://via.placeholder.com/600x400?text=No+Image'; // 기본 이미지
 
   return `
     <a href="work-detail.html?id=${id}" class="project-item" style="text-decoration: none;">
