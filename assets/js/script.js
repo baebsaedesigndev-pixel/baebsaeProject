@@ -4,7 +4,7 @@ import { createClient } from 'https://esm.sh/contentful'
 // 2. 내 창고 열쇠 세팅
 const client = createClient({
   space: 'a2i4hu9d1yta',
-  accessToken: 'waZ6thvpa2i4hu9d1yta8c9doWZH9IpH8BQ49MhR9bA0qz1IDSQIHNM'
+  accessToken: 'tOOpIzbWM3kluA5V6w1pRQm37-68MKjLWqis_3bszXA'
 })
 
 // 3. 데이터를 가져와서 화면에 뿌려주는 함수
