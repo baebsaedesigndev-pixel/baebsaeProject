@@ -24,25 +24,26 @@ async function displayProjects() {
       return
     }
 
-    // 4. 화면에 그리기 (링크 기능 추가됨)
-    container.innerHTML = response.items.map(item => {
-      const { title, thumbnail } = item.fields
-      const id = item.sys.id // ★ 핵심: 각 프로젝트의 고유 ID를 가져옵니다
-      
-      const imageUrl = thumbnail.fields.file.url.startsWith('//') 
-                       ? 'https:' + thumbnail.fields.file.url 
-                       : thumbnail.fields.file.url;
+    // 29행부터 수정
+container.innerHTML = response.items.map(item => {
+  const title = item.fields['fields.name'] // fields.name 필드에서 제목 가져오기
+  const thumbnail = item.fields['title.image'] // title.image 필드에서 이미지 가져오기
+  const id = item.sys.id
 
-      // <a> 태그로 감싸서 클릭하면 work-detail.html로 이동하게 만듭니다
-      return `
-        <a href="work-detail.html?id=${id}" class="project-item" style="text-decoration: none;">
-          <img src="${imageUrl}?fm=webp&q=75" alt="${title}">
-          <div class="project-info">
-            <h3>${title}</h3>
-          </div>
-        </a>
-      `
-    }).join('')
+  // 이미지가 없을 경우를 대비한 안전장치
+  const imageUrl = (thumbnail && thumbnail.fields && thumbnail.fields.file) 
+    ? (thumbnail.fields.file.url.startsWith('//') ? 'https:' + thumbnail.fields.file.url : thumbnail.fields.file.url)
+    : '기본_이미지_주소'; 
+
+  return `
+    <a href="work-detail.html?id=${id}" class="project-item" style="text-decoration: none;">
+      <img src="${imageUrl}?fm=webp&q=75" alt="${title}">
+      <div class="project-info">
+        <h3>${title}</h3>
+      </div>
+    </a>
+  `
+}).join('')
 
   } catch (error) {
     console.error('에러 상세 정보:', error);
