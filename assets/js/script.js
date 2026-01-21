@@ -3,8 +3,8 @@ import { createClient } from 'https://esm.sh/contentful'
 
 // 2. 내 창고 열쇠 세팅
 const client = createClient({
-  space: 'kt9ca8nanx3n',
-  accessToken: 'waZ6thvp8c9doWZH9IpH8BQ49MhR9bA0qz1IDSQIHNM'
+  space: 'a2i4hu9d1yta',
+  accessToken: 'waZ6thvpa2i4hu9d1yta8c9doWZH9IpH8BQ49MhR9bA0qz1IDSQIHNM'
 })
 
 // 3. 데이터를 가져와서 화면에 뿌려주는 함수
@@ -12,7 +12,7 @@ async function displayProjects() {
   console.log("함수 시작됨!"); 
   try {
     const response = await client.getEntries({
-      content_type: 'work', 
+      content_type: 'baebsae-detail', 
       order: '-sys.createdAt'
     })
 
