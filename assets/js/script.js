@@ -12,7 +12,7 @@ async function displayProjects() {
   console.log("함수 시작됨!"); 
   try {
     const response = await client.getEntries({
-      content_type: 'baebsae-detail', // 1. 모델 ID (22.PNG 상단 확인)
+      content_type: 'baebsaeDetail', // 1. 모델 ID (22.PNG 상단 확인)
       order: '-sys.createdAt'
     })
 
